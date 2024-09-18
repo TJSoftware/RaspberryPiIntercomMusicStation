@@ -40,7 +40,7 @@ Visit web interface
 yourUser/yourPass  
 
 ## sudo apt install python3-pika
-sudo apt-get install netcat-openbsd
+sudo apt-get install netcat-openbsd  
 Follow steps on https://www.waveshare.com/wiki/WM8960_Audio_HAT
 
 # Additional Setup
