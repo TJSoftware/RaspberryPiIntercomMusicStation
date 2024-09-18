@@ -15,6 +15,30 @@ A GPIO Ribbon Cable - https://www.adafruit.com/product/1988
 Optional - USB C Power Switch - https://www.canakit.com/raspberry-pi-4-on-off-power-switch.html  
 
 # Required Software
+## A working version of Rabbit MQ installed and ready for use
+Install  
+sudo apt-get install rabbitmq-server
+
+Start on boot  
+sudo systemctl enable rabbitmq-server
+
+Start now 
+sudo systemctl start rabbitmq-server
+
+Install web-based management interface  
+sudo rabbitmq-plugins enable rabbitmq_management
+
+Create a new administrator account  
+sudo rabbitmqctl add_user newadmin s0m3p4ssw0rd  
+sudo rabbitmqctl set_user_tags newadmin administrator  
+sudo rabbitmqctl set_permissions -p / newadmin \".\*\" \".\*\" \".\*\"
+
+You can also visit the web if there are issues  
+Visit web interface  
+<http://raspberrypi:15672/>
+
+yourUser/yourPass  
+
 ## sudo apt install python3-pika
 sudo apt-get install netcat-openbsd
 Follow steps on https://www.waveshare.com/wiki/WM8960_Audio_HAT
